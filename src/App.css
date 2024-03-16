@@ -53,3 +53,25 @@
 .login-button:hover {
   background-color: rgba(0, 0, 0, 0.739);
 }
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 30px;
+  align-items: center;
+}
+
+.cart-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-container input {
+  border-radius: 10px;
+  border: 1px solid black;
+  outline: none;
+  padding: 6px 12px;
+
+
+}
