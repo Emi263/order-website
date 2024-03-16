@@ -1,4 +1,5 @@
 import { jwtDecode } from "jwt-decode";
+import products from "./data/products";
 
 export function decodeToken() {
   const token = localStorage.getItem("token");
@@ -20,4 +21,10 @@ export function checkIfTokenIsValid() {
 
   if (difference < millisecondsInADay) return true;
   return false;
+}
+
+export function getCategories() {
+  const allCategories = products.map((item) => item.category);
+  const allUniqueCategories = ["All", ...new Set(allCategories)];
+  return allUniqueCategories;
 }
