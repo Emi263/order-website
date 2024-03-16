@@ -6,9 +6,12 @@ export function decodeToken() {
     const decoded = jwtDecode(token);
     return decoded;
   }
+  return null;
 }
 
 export function checkIfTokenIsValid() {
+  if (decodeToken() === null) return false;
+
   const generatedDate = decodeToken().iat;
   const now = new Date().getTime();
   const dateTimeStamp = new Date(generatedDate * 1000).getTime();
