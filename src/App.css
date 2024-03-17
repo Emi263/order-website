@@ -78,6 +78,8 @@
   max-width: 350px;
   padding: 12px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 
@@ -103,4 +105,25 @@
 
 .cart-item button {
   width: 25px;
+}
+
+
+@media screen and (max-width: 520px) {
+  .product-list-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  .header-container {
+    flex-direction: column;
+    gap: 22px;
+  }
+}
+
+.w-100 {
+  width: 100%;
+  padding: 20px;
+  margin-top: 10px;
 }

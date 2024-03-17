@@ -13,7 +13,9 @@ function ProductCategories() {
     <div
       style={{
         display: "flex",
-        justifyContent: "space-between",
+        gap: 12,
+        padding: 12,
+        flexWrap: "wrap",
       }}
     >
       {allCategories.map((category) => (

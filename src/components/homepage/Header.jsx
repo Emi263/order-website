@@ -5,13 +5,14 @@ import { ProductContext, ThemeContext } from "../../screens/HomePage";
 import { Modal } from "antd";
 import { useNavigate } from "react-router-dom";
 import products from "../../data/products";
+import { StarOutlined } from "@ant-design/icons";
 
 function Header() {
   const context = useContext(ThemeContext);
 
   const nav = useNavigate();
 
-  const { productsInCart, setProductsInCart, productList, setProductList } = useContext(ProductContext);
+  const { productsInCart, setProductsInCart, setProductList } = useContext(ProductContext);
 
   function handleSwitchOnChange(checked) {
     if (checked) {

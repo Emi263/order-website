@@ -28,3 +28,15 @@ export function getCategories() {
   const allUniqueCategories = ["All", ...new Set(allCategories)];
   return allUniqueCategories;
 }
+
+export function getBase64(file) {
+  let reader = new FileReader();
+  reader.readAsDataURL(file);
+  reader.onload = function () {
+    console.log(reader.result);
+    return reader.result;
+  };
+  reader.onerror = function (error) {
+    console.log("Error: ", error);
+  };
+}
